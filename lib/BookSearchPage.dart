@@ -33,7 +33,6 @@ class _BookSearchPageState extends State<BookSearchPage> {
         final data = json.decode(response.body);
         setState(() {
           _books = data['docs'];
-          print("data fetched "+data);
           if (_books.isEmpty) {
             _error = 'No Books';
           } else {
